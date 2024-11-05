@@ -33,9 +33,9 @@ func main() {
             bannedWords[i] = strings.TrimSpace(bannedWords[i])
         }
 
-        // Répondre avec le JSON
-        w.Header().Set("Content-Type", "application/json")
-        w.Write([]byte("[\"" + strings.Join(bannedWords, "\", \"") + "\"]"))
+        // // Répondre avec le JSON
+        // w.Header().Set("Content-Type", "application/json")
+        // w.Write([]byte("[\"" + strings.Join(bannedWords, "\", \"") + "\"]"))
     })
 
     // Route pour résoudre le problème du cavalier
