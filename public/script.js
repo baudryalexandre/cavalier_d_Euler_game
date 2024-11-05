@@ -179,7 +179,6 @@ function normalizeWord(word) {
 }
 
 // Gérer la soumission du score
-// Gérer la soumission du score
 document.getElementById('submit-score').addEventListener('click', () => {
     const playerNameEnd = document.getElementById('player-name-end').value.trim(); // Récupère le nom du joueur
 
@@ -195,7 +194,7 @@ document.getElementById('submit-score').addEventListener('click', () => {
     }
 
     // Vérifier les mots bannis
-    fetch('/banned-words.txt') // Assurez-vous que le chemin est correct
+    fetch('banned-words.txt') // Assurez-vous que le chemin est correct
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erreur réseau : ' + response.statusText);
