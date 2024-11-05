@@ -195,9 +195,15 @@ document.getElementById('submit-score').addEventListener('click', () => {
 
     // Vérifier les mots bannis
     fetch('../banned_words.txt')
-        .then(response => response.json())
-        .then(bannedWords => {
-            // Normaliser les mots bannis
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erreur réseau : ' + response.statusText);
+            }
+            return response.text(); // Lire le contenu comme texte
+        })
+        .then(text => {
+            // Séparer les mots par ligne et normaliser
+            const bannedWords = text.split('\n').map(word => word.trim());
             const normalizedBannedWords = bannedWords.map(normalizeWord);
 
             // Normaliser le pseudo du joueur
