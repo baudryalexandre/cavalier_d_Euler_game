@@ -194,16 +194,10 @@ document.getElementById('submit-score').addEventListener('click', () => {
     }
 
     // Vérifier les mots bannis
-    fetch('./banned-words.txt') // Assurez-vous que le chemin est correct
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erreur réseau : ' + response.statusText);
-            }
-            return response.text(); // Lire le contenu comme texte
-        })
-        .then(text => {
-            // Séparer les mots par ligne et normaliser
-            const bannedWords = text.split('\n').map(word => word.trim());
+    fetch('/banned-words')
+        .then(response => response.json())
+        .then(bannedWords => {
+            // Normaliser les mots bannis
             const normalizedBannedWords = bannedWords.map(normalizeWord);
 
             // Normaliser le pseudo du joueur
@@ -234,7 +228,6 @@ document.getElementById('submit-score').addEventListener('click', () => {
             console.error('Erreur lors de la récupération des mots bannis:', error);
         });
 });
-
 
 // Fonction pour afficher tous les scores dans le tableau en mode compétition
 function afficherScores() {
