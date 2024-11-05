@@ -194,7 +194,7 @@ document.getElementById('submit-score').addEventListener('click', () => {
     }
 
     // Vérifier les mots bannis
-    fetch('/banned-words.json')
+    fetch('/banned-words.txt')
         .then(response => response.json())
         .then(bannedWords => {
             // Normaliser les mots bannis
