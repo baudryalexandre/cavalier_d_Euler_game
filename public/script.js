@@ -154,7 +154,7 @@ function getPossibleMoves(x, y) {
 // Gérer la fin du jeu
 function endGame() {
     finalScoreDisplay.textContent = score; // Afficher le score final
-    endScreen.style.display = 'block'; // Afficher l'écran de fin
+    endScreen.style.display = 'flex'; // Afficher l'écran de fin
     gameContainer.style.display = 'none'; // Cacher le conteneur de jeu
 }
 
@@ -261,7 +261,7 @@ document.getElementById('algo-button').addEventListener('click', () => {
     const startX = knightPosition.x;
     const startY = knightPosition.y;
     const loadingIndicator = document.getElementById('loading-indicator');
-    loadingIndicator.style.display = 'block';
+    loadingIndicator.style.display = 'flex';
 
     // Appel à l'API pour récupérer la solution
     fetch(`http://127.0.0.1:5000/run-algo?start_x=${startX}&start_y=${startY}`)
