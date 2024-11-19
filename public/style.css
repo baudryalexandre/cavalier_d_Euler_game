@@ -541,7 +541,7 @@ footer p {
     
     h2 {
         margin: 20px 0;
-        font-size: 1.4em;
+        font-size: 1.2em;
         z-index: 2;
         color: greenyellow;
     
@@ -611,7 +611,7 @@ footer p {
         display: flex;
         flex-direction: column;
     }
-    
+
     #scoreboard {
         position: sticky;
         top: 1%;
