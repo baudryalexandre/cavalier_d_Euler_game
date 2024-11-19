@@ -32,7 +32,7 @@ h2 {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
+/* h1 {
     top: 57px;
     position: absolute;
     font-size: 7em;
@@ -42,7 +42,7 @@ h1 {
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: black;
 
-}
+} */
 
 h2 {
     margin: 20px 0;
@@ -530,7 +530,7 @@ footer p {
         text-shadow: 0 10px 2px rgba(3, 3, 3, 0.5);
         z-index: 2;
         color: #45a049;
-        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-width: 1.5px;
         -webkit-text-stroke-color: black;
     
     }   
