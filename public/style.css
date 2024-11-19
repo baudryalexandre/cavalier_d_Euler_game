@@ -167,13 +167,13 @@ label {
     transition: background 0.3s, transform 0.2s;
 }
 
-#mode-container {
+/* #mode-container {
     z-index: 2;
     font-size: 1.9em;
     margin: 20px 0;
     display: flex;
     flex-direction: column;
-}
+} */
 
 #player-name {
     z-index: 2;
@@ -604,6 +604,14 @@ footer p {
         font-size: 3em;
     }
 
+    #mode-container {
+        z-index: 2;
+        font-size: 1.9em;
+        /* margin: 0px 0; */
+        display: flex;
+        flex-direction: column;
+    }
+    
     #scoreboard {
         position: sticky;
         top: 1%;
