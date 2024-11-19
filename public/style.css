@@ -527,7 +527,7 @@ footer p {
     h1 {
         top: 2%;
         position: absolute;
-        font-size: 3em;
+        font-size: 4em;
         text-shadow: 0 10px 2px rgba(3, 3, 3, 0.5);
         z-index: 2;
         color: #45a049;
